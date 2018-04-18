@@ -6,9 +6,7 @@ class App extends React.Component {
   render() {
     return (
         <div className="app">
-          <div>
-            <Sidenav />
-          </div>
+          <Sidenav />
           <div className="app-right">
             <Topnav />
           </div>

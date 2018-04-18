@@ -6,7 +6,7 @@ class Sidenav extends React.Component {
       <div id="main-nav">
         <div className="main-nav-wrapper">
           <nav id="main">
-            <img className="home-logo" src="assets/go.png" alt="Gocious" />
+            <i className="icon-go"></i>
             <ul>
               <li>
                 <a href="#">

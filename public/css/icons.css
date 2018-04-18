@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Gocious-Icons';
-  src:  url('fonts/Gocious-Icons.eot?x37tch');
-  src:  url('fonts/Gocious-Icons.eot?x37tch#iefix') format('embedded-opentype'),
-    url('fonts/Gocious-Icons.woff2?x37tch') format('woff2'),
-    url('fonts/Gocious-Icons.ttf?x37tch') format('truetype'),
-    url('fonts/Gocious-Icons.woff?x37tch') format('woff'),
-    url('fonts/Gocious-Icons.svg?x37tch#Gocious-Icons') format('svg');
+  src:  url('fonts/Gocious-Icons.eot?f84c3o');
+  src:  url('fonts/Gocious-Icons.eot?f84c3o#iefix') format('embedded-opentype'),
+    url('fonts/Gocious-Icons.woff2?f84c3o') format('woff2'),
+    url('fonts/Gocious-Icons.ttf?f84c3o') format('truetype'),
+    url('fonts/Gocious-Icons.woff?f84c3o') format('woff'),
+    url('fonts/Gocious-Icons.svg?f84c3o#Gocious-Icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-go:before {
+  content: "\e916";
+}
 .icon-angle-down:before {
   content: "\e900";
 }
