@@ -1,11 +1,17 @@
 import React from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
+import './App.css';
+import Sidenav from './Sidenav';
+
 
 class App extends React.Component {
   render() {
     return (
-        <h3>Hello from React</h3>
+        <div className="app">
+          <Sidenav />
+        </div>
     );
   }
 }
 
-module.exports = App;
+export default App;
