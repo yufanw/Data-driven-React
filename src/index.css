@@ -7,6 +7,7 @@
 
 body, input {
 	font-family: Quicksand, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	background-color: lightgray;
 }
 p { line-height: 1.3; }
 .transition, a, #discussions, header {
@@ -19,16 +20,6 @@ p { line-height: 1.3; }
 	grid-template-columns: 65px 1fr;
 	height: 100vh;
 	width: 100vw;
-}
-
-.app-right {
-	background-color: lightgrey;
-}
-
-@media screen and (max-width: 480px) {
-	.app {
-		grid-template-columns: 1fr;
-	}
 }
 
 /* VARS */
@@ -44,96 +35,61 @@ p { line-height: 1.3; }
 #main-nav {
 	background-color: var(--purple);
 	color: #fff;
-	padding: 5px;
-	height: 100%;
+	height: 50px;
 	width: 65px;
+	text-align: center;
+}
+.home-logo {
+	padding-top: 5px;
+	height: 50px;
 }
 nav#main > ul {
 	list-style: none;
 }
-nav#main > ul > li {
-	padding: 0;
-	margin: 0;
-}
 nav#main a {
 	color: #fff;
 	text-decoration: none;
+}
+.icon-go:hover {
+	color: var(--green)
+}
+.nav-icon {
 	display: inline-block;
-	padding: 5px;
 	border-radius: var(--br);
-	margin-top: 1rem;
+	padding: 0.8em;
+	margin: 0.8em;
 	font-size: 7px;
-	letter-spacing: 1px;
-	line-height: 1.1;
 	text-transform: uppercase;
 }
-nav#main a:hover {
-	background: #eee;
-	color: #000;
+.nav-icon:hover {
+	background: grey;
 }
 nav#main i {
 	font-size: 2rem;
-	margin: 2px;
 	display: inline-block;
 }
-
-.main-nav-wrapper {
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
-	height: calc(100% - 10px);
-}
-.main-nav-wrapper > nav#main {
-	flex: 1 80%;
-	text-align: center;
-}
-.main-nav-wrapper > nav#user {
-	flex: 0;
-	width: 75%;
-	margin: 0 auto;
-}
-
 nav#main i {
 	font-size: 2rem;
-	margin: 5px 0;
 }
-
-.home-logo {
-  margin: 0;
+.main-bot {
+	background-color: var(--purple);
+	width: 100%;
+	padding: 3px;
+	border-radius: 0 0 var(--br) var(--br);
 }
-
-.main-nav-wrapper {
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
-	height: calc(100% - 10px);
-}
-.main-nav-wrapper > nav#main {
-	flex: 1 80%;
-	text-align: center;
-}
-.main-nav-wrapper > nav#user {
-	flex: 0;
-	width: 75%;
-	margin: 0 auto;
-}
-
 @media screen and (max-width: 480px) {
-	#main-nav {
-		display: none;
+	#main p {
+		font-size: 18px;
 	}
+	.main-bot {
+		width: 130px;
+	}
+
 }
 
 /* ICONS */
 i[class^="icon-"] {
 	font-weight: normal !important;
-}
-
-
-/* USER NAV */
-
-img.user {
-	border-radius: var(--br);
 }
 
 /* HEADER */
@@ -186,10 +142,6 @@ header a i {
 
 ul.actions > li {
 	display: inline-block;
-	margin-right: -4px;
-}
-ul.actions > li:last-child {
-	margin-right: 0;
 }
 ul.actions > li i {
 	font-size: 1.3rem;

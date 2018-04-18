@@ -1,37 +1,45 @@
 import React from 'react';
+import { Button, Collapse, Well } from 'react-bootstrap';
 
 class Sidenav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
   render() {
     return (
       <div id="main-nav">
-        <div className="main-nav-wrapper">
-          <nav id="main">
-            <i className="icon-go"></i>
-            <ul>
+        <nav id="main">
+          <div className="home-logo">
+            <a href="#" onClick={() => this.setState({ open: !this.state.open })}>
+              <i className="icon-go"></i>
+            </a>
+          </div>
+          <Collapse in={this.state.open}>
+            <ul className="main-bot">
               <li>
-                <a href="#">
+                <a href="#" className="nav-icon">
                   <i className="icon-search"></i>
-                  Search
+                  <p>Search</p>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" className="nav-icon">
                   <i className="icon-feature-family"></i>
-                  Feature Sets
+                  <p>Features</p>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" className="nav-icon">
                   <i className="icon-programs"></i>
-                  Programs
+                  <p>Programs</p>
                 </a>
               </li>
             </ul>
-          </nav>
-          <nav id="user">
-            <img className="user" src="assets/user.jpg" alt="That's You" />
-          </nav>
-        </div>
+          </Collapse>
+        </nav>
       </div>
     );
   }
