@@ -1,14 +1,17 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
-import './App.css';
 import Sidenav from './Sidenav';
-
+import Topnav from './Topnav';
 
 class App extends React.Component {
   render() {
     return (
         <div className="app">
-          <Sidenav />
+          <div>
+            <Sidenav />
+          </div>
+          <div className="app-right">
+            <Topnav />
+          </div>
         </div>
     );
   }

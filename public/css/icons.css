@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Gocious-Icons';
+  src:  url('fonts/Gocious-Icons.eot?x37tch');
+  src:  url('fonts/Gocious-Icons.eot?x37tch#iefix') format('embedded-opentype'),
+    url('fonts/Gocious-Icons.woff2?x37tch') format('woff2'),
+    url('fonts/Gocious-Icons.ttf?x37tch') format('truetype'),
+    url('fonts/Gocious-Icons.woff?x37tch') format('woff'),
+    url('fonts/Gocious-Icons.svg?x37tch#Gocious-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Gocious-Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\e901";
+}
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-angle-up:before {
+  content: "\e903";
+}
+.icon-arrow-left:before {
+  content: "\e904";
+}
+.icon-arrow-right:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-plus:before {
+  content: "\e90c";
+}
+.icon-dots:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e90b";
+}
+.icon-calendar:before {
+  content: "\e906";
+}
+.icon-download:before {
+  content: "\e909";
+}
+.icon-upload:before {
+  content: "\e910";
+}
+.icon-comments-o:before {
+  content: "\e911";
+}
+.icon-comments-o-left:before {
+  content: "\e912";
+}
+.icon-comments-o-right:before {
+  content: "\e913";
+}
+.icon-feature-family:before {
+  content: "\e90a";
+}
+.icon-programs:before {
+  content: "\e90d";
+}
+.icon-reports:before {
+  content: "\e90e";
+}
+.icon-search:before {
+  content: "\e90f";
+}
+.icon-star-o:before {
+  content: "\e914";
+}
+.icon-star:before {
+  content: "\e915";
+}

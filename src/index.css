@@ -1,0 +1,179 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+/* CSS Document */
+
+
+/* MAIN */
+
+body, input {
+	font-family: Quicksand, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+p { line-height: 1.3; }
+.transition, a, #discussions, header {
+	-webkit-transition: 	all 0.7s ease-out; /* Safari */
+    transition: 			all 0.7s ease-out;
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 65px 1fr;
+	height: 100vh;
+	width: 100vw;
+}
+
+.app-right {
+	background-color: lightgrey;
+}
+
+/* VARS */
+
+:root {
+	--purple: #572C86;
+	--green: #8DC63F;
+	--br: 4px ;
+}
+
+/* MAIN NAV */
+
+#main-nav {
+	background-color: var(--purple);
+	color: #fff;
+	padding: 5px;
+	height: 100%;
+	width: 65px;
+}
+nav#main > ul {
+	list-style: none;
+}
+nav#main > ul > li {
+	padding: 0;
+	margin: 0;
+}
+nav#main a {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px;
+	border-radius: var(--br);
+	margin-top: 1rem;
+	font-size: 7px;
+	letter-spacing: 1px;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+nav#main a:hover {
+	background: #eee;
+	color: #000;
+}
+nav#main i {
+	font-size: 2rem;
+	margin: 2px;
+	display: inline-block;
+}
+
+.main-nav-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	height: calc(100% - 10px);
+}
+.main-nav-wrapper > nav#main {
+	flex: 1 80%;
+	text-align: center;
+}
+.main-nav-wrapper > nav#user {
+	flex: 0;
+	width: 75%;
+	margin: 0 auto;
+}
+
+nav#main i {
+	font-size: 2rem;
+	margin: 5px 0;
+}
+
+.main-nav-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	height: calc(100% - 10px);
+}
+.main-nav-wrapper > nav#main {
+	flex: 1 80%;
+	text-align: center;
+}
+.main-nav-wrapper > nav#user {
+	flex: 0;
+	width: 75%;
+	margin: 0 auto;
+}
+
+
+/* ICONS */
+i[class^="icon-"] {
+	font-weight: normal !important;
+}
+
+
+/* USER NAV */
+
+img.user {
+	border-radius: var(--br);
+}
+
+/* HEADER */
+
+header {
+	background: #8b8b8b;
+	color: #fff;
+}
+header a {
+	color: #fff;
+	text-decoration: none;
+}
+header a, 
+.header-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+header a {
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	text-align: center;
+}
+header a:hover {
+	color: var(--purple);
+	background: #fff;
+} 
+header a i {
+	display: block;
+	margin-top: 30%;
+}
+.header-title {
+	padding-left: 5px;
+}
+.section-name {
+	display: block;
+	font-size: 8px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.section {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+header .header-actions {
+	float: right;
+}
+ul.actions > li {
+	display: inline-block;
+	margin-right: -4px;
+}
+ul.actions > li:last-child {
+	margin-right: 0;
+}
+ul.actions > li i {
+	font-size: 1.3rem;
+}
