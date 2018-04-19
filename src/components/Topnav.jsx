@@ -4,15 +4,15 @@ class Topnav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Feature Type",
-      section: "Engine",
+      name: "Feature",
+      section: "Create A Feature",
       icon: "icon-arrow-left"
     };
   } 
   render() {
     return (
       <header className="primary">
-        <a href="#" className="top-left-icon"><i className={this.state.icon}></i></a>
+        <a href="#"><i className={this.state.icon}></i></a>
         <div className="header-title">
           <span className="section-name">{this.state.name}</span>
           <span className="section">{this.state.section}</span>
