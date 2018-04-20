@@ -11,7 +11,7 @@ class App extends React.Component {
           <Sidenav />
           <div className="app-right">
             <Topnav />
-            <Main />
+            <Main limit={4}/>
           </div>
         </div>
     );
