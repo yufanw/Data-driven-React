@@ -10,7 +10,7 @@ let schema = new graphQL.GraphQLSchema({
       },
       message: {
         type: graphQL.GraphQLString,
-        resolve: () => 'Hello GraphQL'
+        resolve: () => 'Hello from GraphQL'
       }
     })
   })
