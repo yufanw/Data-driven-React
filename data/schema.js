@@ -1,34 +1,28 @@
-var graphQL = require('graphql');
+var gr = require('graphql');
 
-
-let counter = 42;
-
-let schema = new graphQL.GraphQLSchema({
-  query: new graphQL.GraphQLObjectType({
-    name: 'Query',
+let Schema = (db) => {
+  let linkType = new gr.GraphQLObjectType({
+    name: 'Link',
     fields: () => ({
-      counter: {
-        type: graphQL.GraphQLInt,
-        resolve: () => counter
-      },
-      message: {
-        type: graphQL.GraphQLString,
-        resolve: () => 'Hello from GraphQL'
-      }
+      _id: { type: gr.GraphQLString },
+      title: { type: gr.GraphQLString },
+      url: { type: gr.GraphQLString }
     })
-  }),
-
-  mutation: new graphQL.GraphQLObjectType({
-    name: 'Mutation',
-    fields: () => ({
-      incrementCounter: {
-        type: graphQL.GraphQLInt,
-        resolve: () => ++counter
-      }
+  });
+  
+  let schema = new gr.GraphQLSchema({
+    query: new gr.GraphQLObjectType({
+      name: 'Query',
+      fields: () => ({
+        links: {
+          type: new gr.GraphQLList(linkType),
+          resolve: () => db.collection('links').find({}).toArray()
+        }
+      })
     })
-  })
+  });
 
+  return schema;
+}
 
-});
-
-module.exports = schema;
+module.exports = Schema;

@@ -6,16 +6,15 @@ let app = express();
 
 app.use(express.static('public'));
 
-app.use('/graphql', graphQLHTTP({
-    schema,
-    graphiql: true
-}));
-
 let db;
 mongodb.MongoClient.connect(process.env.MONGO_URL, (err, client) => {
     if (err) { throw err; }
 
     db = client.db('graphqldb');
+    app.use('/graphql', graphQLHTTP({
+        schema: schema(db),
+        graphiql: true
+    }));
     app.listen(3000, () => console.log('listening on port 3000'));
 
 });
