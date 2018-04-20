@@ -2,6 +2,7 @@ import React from 'react';
 import Sidenav from './Sidenav';
 import Topnav from './Topnav';
 import FeatureForm from './FeatureForm';
+import Main from './Main'
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
           <Sidenav />
           <div className="app-right">
             <Topnav />
-            <FeatureForm />
+            <Main />
           </div>
         </div>
     );
