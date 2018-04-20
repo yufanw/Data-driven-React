@@ -1,25 +1,25 @@
 import React from 'react';
-import { FormGroup, 
-         ControlLabel, 
-         FormControl
-       } from 'react-bootstrap';
+import { 
+  FormGroup, 
+  ControlLabel, 
+  FormControl
+} from 'react-bootstrap';
+import FeatureSelect from './FeatureSelect';
 
-class Featureform extends React.Component {
+class FeatureForm extends React.Component {
   render() {
     return (
       <div className="feature-form">
         <h2>Create A Feature</h2>
         <form className="form-wrapper">
-          <FormGroup controlId="formControlsSelect">
-            <FormControl componentClass="select" placeholder="Select Type">
-              <option value="select">Engine</option>
-              <option value="other">... Add New Feature Type</option>
-            </FormControl>
-          </FormGroup>
-          <FormGroup>
+          <FeatureSelect />
+          <button className="btn-type" type="submit">
+            <i className="icon-plus"></i>
+          </button>
+          <FormGroup className="form-name">
             <FormControl type="text" placeholder="Enter Name" />
           </FormGroup>
-          <FormGroup>
+          <FormGroup className="form-code">
             <FormControl type="text" placeholder="Enter Code" />
           </FormGroup>
 
@@ -32,4 +32,4 @@ class Featureform extends React.Component {
   }
 }
 
-export default Featureform;
+export default FeatureForm;
