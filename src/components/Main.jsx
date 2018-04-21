@@ -30,7 +30,7 @@ class Main extends React.Component {
   }
   
   render() {
-    let content = this.state.links.slice(0, this.props.limit).map(link => {
+    let content = this.state.links.map(link => {
       return (
         <li key={link._id}>
           <a href={link.url}>{link.title}</a>
