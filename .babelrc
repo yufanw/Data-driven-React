@@ -5,6 +5,7 @@
         "stage-2"
     ],
     "plugins": [
+        ["relay", {"schema":"./data/schema.json"}],
         "babel-relay-plugin-loader",
         "./src/babelRelayPlugin"
     ]

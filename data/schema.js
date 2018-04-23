@@ -1,6 +1,18 @@
 var gr = require('graphql');
 
 let Schema = (db) => {
+  let store = {};
+
+  let storeType = new gr.GraphQLObjectType({
+    name: 'Store',
+    fields: () => ({
+      links: {
+        type: new gr.GraphQLList(linkType),
+        resolve: () => db.collection("links").find({}).toArray()
+      }
+    })
+  });
+
   let linkType = new gr.GraphQLObjectType({
     name: 'Link',
     fields: () => ({
@@ -14,9 +26,9 @@ let Schema = (db) => {
     query: new gr.GraphQLObjectType({
       name: 'Query',
       fields: () => ({
-        links: {
-          type: new gr.GraphQLList(linkType),
-          resolve: () => db.collection('links').find({}).toArray()
+        store: {
+          type: storeType,
+          resolve: () => store
         }
       })
     })
