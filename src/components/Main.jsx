@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 
 
 class Main extends React.Component {
@@ -9,17 +9,20 @@ class Main extends React.Component {
   };
   
   static defaultProps = {
-    limit: 5
+    limit: 6
   };
   
   render() {
-    let content = this.props.links.slice(0, this.props.limit).map(link => {
-      return (
-        <li key={link._id}>
-          <a href={link.url}>{link.title}</a>
-        </li>
-      );
-    });
+    let content = null;
+    if (this.props.store) {
+      content = this.props.store.links.slice(0, this.props.limit).map(link => {
+        return (
+          <li key={link._id}>
+            <a href={link.url}>{link.title}</a>
+          </li>
+        );
+      });
+    }
     return (
       <div>
         <h3>Links</h3>

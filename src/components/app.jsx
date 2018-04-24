@@ -1,4 +1,5 @@
 import React from 'react';
+import Relay from 'react-relay/classic';
 import Sidenav from './Sidenav';
 import Topnav from './Topnav';
 import FeatureForm from './FeatureForm';
