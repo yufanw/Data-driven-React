@@ -23,10 +23,7 @@ class App extends React.Component {
           <Sidenav />
           <div className="app-right">
             <Topnav />
-            <Relay.RootContainer
-              Component={Main}
-              route={new HomeRoute()}
-            />
+            <FeatureForm />
           </div>
         </div>
     );

@@ -228,3 +228,7 @@ button#dropdown-custom-menu {
 		grid-area: d;
 	}
 }
+
+.main {
+	margin-top: 50%;
+}

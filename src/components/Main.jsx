@@ -24,7 +24,7 @@ class Main extends React.Component {
       });
     }
     return (
-      <div>
+      <div className="main">
         <h3>Links</h3>
         <ul>
           {content}
