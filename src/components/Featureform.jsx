@@ -4,15 +4,12 @@ import {
   ControlLabel, 
   FormControl
 } from 'react-bootstrap';
-import FeatureSelect from './FeatureSelect';
 
 class FeatureForm extends React.Component {
   render() {
     return (
       <div className="feature-form">
-        <h2>Create A Feature</h2>
         <form className="form-wrapper">
-          <FeatureSelect />
           <button className="btn-type" type="submit">
             <i className="icon-plus"></i>
           </button>
